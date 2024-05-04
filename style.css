@@ -1,0 +1,123 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+/*dark e light mode*/
+:root{
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color:  rgb(34, 149, 34) solid 1px;
+  --surface-color: rgba(255,255,255,0.1);
+  --surface-color-hover: rgba(48, 47, 47, 0.107);
+  --switch-bg-url: url(./assets/sun.svg);
+  --position-button: left: 0;
+}
+.dark{
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color:   rgb(34, 149, 34) solid 1px;
+  --surface-color: rgba(255,255,255,0.1);
+  --surface-color-hover: rgba(255,255,255,0.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+  --position-button: right: 0;
+}
+body {
+   
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background: color image repeat position/size;
+    background: var(--bg-url) no-repeat top center/cover;
+    height: 100vh;
+}
+body *{
+    font-family: verdana;
+    color: var(--text-color);
+    text-align: center;
+  
+  }
+#container{
+    width: 360px;
+    margin: 56px auto 0px;
+}
+#profile{
+height: 200px;
+text-align: center;
+}
+#profile img{
+    height: 150px;
+}
+#profile p{
+  display:block;
+  line-height: 20px;
+  margin-top: 10px;
+  text-decoration: solid;
+  font-size: larger;
+
+}
+#switch{
+  width: 50px;
+  height: 30px;
+  position: relative;
+  display: block;
+  margin:4px auto;
+}
+#switch button{
+    height: 30px;
+    width: 30px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    animation: slide-back .2s;
+}
+.dark #switch button{
+  animation: slide-in .2s forwards;
+}
+
+#switch span{
+   display: block;
+   height: 30px;
+   width: 50px;
+   border-radius: 9999px;
+   border: 1px solid white;
+}
+ul {
+  list-style: none;
+  padding: 15px;
+  
+}
+ul li {
+  border: 1px solid white;
+  padding: 16px;
+  margin: 10px;
+  border-radius: 100px;
+  background: var(--surface-color);
+}
+ul li:hover{
+  background: var(--surface-color-hover);
+}
+#social-links {
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+}
+#social-links a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 50%;
+  margin: 10px;
+
+  transition: .2s;
+}
+#social-links a:hover {
+  background: var(--surface-color-hover);
+}

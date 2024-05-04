@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="light">
+<html lang="pt-br" class="dark">
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +11,48 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <div id="container">
+        <div id="profile">
+              <p>Júlio Mainardi</p>
+              <br>
+             <img src="./assets/avatar-light.png" alt="foto light mode">
+        </div>
+    <div id="switch" onclick="togglemode()">
+        <button></button>
+        <span></span>
+    </div>
+    <div>
+        <ul id="list">
+            <li>
+                <ion-icon name="game-controller-outline"></ion-icon>
+                <a href="#" target="_blank">Sobre</a>
+            </li>
+             <li>
+                <ion-icon name="logo-youtube"></ion-icon>
+                <a href="#" target="_blank">Youtube</a>
+            </li> 
+            <li>
+                <ion-icon name="logo-twitch"></ion-icon>
+                <a href="#" target="_blank">Twitch</a>
+            </li>
+        </ul>
+    </div>
+    <div id="social-links">
+            <a>
+                <ion-icon name="logo-instagram"></ion-icon> 
+            </a>
+            <a>
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a>
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+    </div>
+    </div>
 
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+        <script src="./script.js"></script>
 </body>
 </html>
